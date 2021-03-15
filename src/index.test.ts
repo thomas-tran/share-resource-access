@@ -1,16 +1,22 @@
-import { isNumberParseable } from './';
+import { TokenGenerator } from './';
 
-describe('unit | isNumberParseable', () => {
-  it('returns `true` for values parseable number', () => {
-    expect(isNumberParseable('-7.5')).toBe(true);
-    expect(isNumberParseable(false)).toBe(true);
-    expect(isNumberParseable(1892)).toBe(true);
+describe('should generate token', () => {
+  it('returns token value', () => {
+    const token = TokenGenerator.create('http://sample/file', ['r', 'w'], 1234, 1233, '', 'secret');
+    console.log(token);
+    expect(token).toBeDefined();
   });
 
-  it('returns `false` for values non parseable to number', () => {
-    expect(isNumberParseable('A8sa')).toBe(false);
-    expect(isNumberParseable({})).toBe(false);
-    expect(isNumberParseable(NaN)).toBe(false);
-    expect(isNumberParseable('18L')).toBe(false);
+  it('returns invalid token', () => {
+    const token = 'rs_uri=http%3A%2F%2Fsample%2Ffile&ap=rw&st=1234&et=1233&ip=&sig=fp8DYQewQ0p80Ppqa9e31%2FQTSlrTIy1K%2BqHGd3zojBs%3D';
+    const isValid = TokenGenerator.verify(token, 'secret');
+    expect(isValid).toBe(false);
   });
+
+  it('returns valid token', () => {
+    const token = 'rs_uri=http%3A%2F%2Fsample%2Ffile&ap=rw&st=1234&et=1233&ip=&sig=JJ4iVmFhPVIpQUe%2BkBmvvSAM1bRuwBuansUTDQQ4DbU%3D';
+    const isValid = TokenGenerator.verify(token, 'secret');
+    expect(isValid).toBe(true);
+  });
+ 
 });

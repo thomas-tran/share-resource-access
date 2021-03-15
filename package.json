@@ -1,6 +1,6 @@
 {
-  "name": "[libraryName]",
-  "version": "0.0.0",
+  "name": "share-resource-access",
+  "version": "1.0.0",
   "description": "",
   "cdn": "dist/index.umd.js",
   "main": "dist/index.js",
@@ -9,10 +9,17 @@
   "module": "dist/index.esm.js",
   "jsdelivr": "dist/index.umd.js",
   "umd:main": "dist/index.umd.js",
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.29.1",
+    "tsjs-xpx-chain-sdk": "^0.8.1",
+    "utf8": "^3.0.0",
+    "create-hmac": "^1.1.7"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.14",
     "@types/prettier": "^2.1.2",
+    "@types/utf8": "^2.1.6",
+    "@types/create-hmac": "^1.1.0",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
     "eslint": "^7.11.0",
@@ -39,19 +46,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/[repositoryOwner]/[repositoryName].git"
+    "url": "git+https://github.com/thomas-tran/share-resource-access.git"
   },
-  "keywords": [
-    "typescript",
-    "boilerplate",
-    "library"
-  ],
+  "keywords": [],
   "author": {
-    "name": "[authorFullName]"
+    "name": "Thomas Tran"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/[repositoryOwner]/[repositoryName]/issues"
+    "url": "https://github.com/thomas-tran/share-resource-access/issues"
   },
-  "homepage": "https://github.com/[repositoryOwner]/[repositoryName]#readme"
+  "homepage": "https://github.com/thomas-tran/share-resource-access#readme"
 }

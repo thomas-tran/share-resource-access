@@ -1,56 +1,23 @@
-**[[libraryNameWithSpacesAndUpperCases]](README.md)**
+shareResourceAccess
 
-> Globals
+# shareResourceAccess
 
-# [libraryNameWithSpacesAndUpperCases]
+## Table of contents
 
-## Index
+### Classes
+
+- [TokenGenerator](classes/tokengenerator.md)
 
 ### Type aliases
 
-* [NumberParseable](README.md#numberparseable)
-
-### Functions
-
-* [isNumberParseable](README.md#isnumberparseable)
+- [Permissions](README.md#permissions)
 
 ## Type aliases
 
-### NumberParseable
+### Permissions
 
-Ƭ  **NumberParseable**: number \| string \| boolean & { isNumberParseble: unique symbol  }
+Ƭ **Permissions**: *r* \| *w* \| *d*
 
-*Defined in [index.ts:4](https://github.com/VitorLuizC/typescript-library-boilerplate/blob/bf4667f/src/index.ts#L4)*
+Permission types
 
-A Branded Type for values parseable to number.
-
-## Functions
-
-### isNumberParseable
-
-▸ `Const`**isNumberParseable**(`value`: unknown): value is NumberParseable
-
-*Defined in [index.ts:23](https://github.com/VitorLuizC/typescript-library-boilerplate/blob/bf4667f/src/index.ts#L23)*
-
-Check if value is parseable to number.
-
-**`example`** ```ts
-isNumberParseable('AAAA');
-//=> false
-
-isNumberParseable('100');
-//=> true
-
-if (!isNumberParseable(value))
-  throw new Error('Value can\'t be parseable to `Number`.')
-return Number(value);
-```
-@param value - An `unknown` value to be checked.
-
-#### Parameters:
-
-Name | Type |
------- | ------ |
-`value` | unknown |
-
-**Returns:** value is NumberParseable
+Defined in: [token-generator.ts:7](https://github.com/thomas-tran/share-resource-access/blob/7c9cd1c/src/token-generator.ts#L7)

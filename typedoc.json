@@ -1,9 +1,7 @@
 {
   "out": "./docs",
-  "mode": "file",
-  "name": "[libraryNameWithSpacesAndUpperCases]",
+  "name": "shareResourceAccess",
   "theme": "markdown",
   "readme": "none",
-  "module": "es2015",
   "tsconfig": "./tsconfig.bundle.json"
 }
